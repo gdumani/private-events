@@ -1,0 +1,19 @@
+<h1>Sign Up</h1>
+<%= form_with model: @user, url: users_path do |form| %>
+<%= render "shared/form_errors", form: form %> 
+ 
+
+  <div class="mb-3">
+    <%= form.label :username %>
+    <%= form.text_field :username, class: "form-control", placeholder: "username" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "form-control", placeholder: "user@mail" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.submit "Sign Up", class: "btn btn-primary" %>
+  </div>
+<% end %>
