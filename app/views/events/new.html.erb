@@ -9,6 +9,13 @@
 </div>
 
 <div class="mb-3">
+    <%= form.label :event_date %>
+    <div class="form-control">
+       <%= form.datetime_select :event_date, class: "form-control" %>
+    </div>
+</div>
+
+<div class="mb-3">
  <%= form.submit "Submit", class: "btn btn-primary" %>
 </div>
 
