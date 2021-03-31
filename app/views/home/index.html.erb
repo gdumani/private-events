@@ -1,1 +1,12 @@
-<h1>Home </h1>
+<h1>Welcome </h1>
+
+<h2><%= @user.username if @user %> </h2>
+<p> session = <%= session %> </p>
+<p> session id =  <%= session[:user_id] %> </p>
+<p> session nil? = <%= session.nil? %> </p>
+<p> user  id  = <%= :user_id %> </p>
+<p> session string  = <%= session.class %> </p>
+<p> session nil?  = <%= session[:user_id].nil? %> </p>
+<p> current username   = <%= @current.username  if @current%> </p>
+<p> current nil? = <%= @current.nil? %> </p>
+
