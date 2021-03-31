@@ -8,8 +8,8 @@
     </div>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav gap-2 ms-auto">
-        <% if @user %>
-          <span class = "nav-link"> <%= @user.username %> </span>
+        <% if @current %>
+          <span class = "nav-link"> <%= @current.username %> </span>
           <%= link_to "Create an Event", events_new_path, class: 'btn btn-outline-secondary nav-link' %>
           <%= link_to 'All Events', events_index_path,  class: 'btn btn-outline-secondary nav-link' %> 
           <%= link_to 'My Events', users_show_path,  class: 'btn btn-outline-secondary nav-link' %> 

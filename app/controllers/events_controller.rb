@@ -4,20 +4,15 @@ class EventsController < ApplicationController
   end
 
   def show
-    @user = User.find_by(id: session[:user_id])
-#    @event = User.Event.find_by(creator: @user.id])
-    @events = @user.events
+    @events = @current.events
   end
 
   def new 
-   @user = User.find_by(id: session[:user_id])
-   @event = @user.events.new
+   @event = @current.events.new
   end
 
 def create
-  #  @user = User.find_by(params[:user_id])
-  @user = User.find_by(id: session[:user_id])
-  @event = @user.events.build(event_params)
+  @event = @current.events.build(event_params)
     if @event.save
         redirect_to events_show_path, notice: "Event was created successfully"
     else

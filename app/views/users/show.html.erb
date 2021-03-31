@@ -1,1 +1,5 @@
-<h1>Users Posts<h1>
+<h1 class="text-primary"> <%=@current.username%> Events </h1>
+<h2>Events Created:</h2>
+<% @events.each do |e|%>
+  <h3>Event: <%= e.description %></h3>
+<%end%>

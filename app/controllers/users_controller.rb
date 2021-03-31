@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show 
-    
+    @events = @current.events
   end
 
   def new
