@@ -5,7 +5,7 @@
   <h3>Event: <%= e.description %></h3>
   <h4>Date: <%= e.event_date%></h4>
   <h4 class= "fst-italic">Creator: <%= e.creator.username %></h4>
-  <%= link_to 'Attend the Event', attended_events_new_path %>
+  <%= link_to 'Attend the Event', attended_events_new_path(:attended_events =>{:user_event_id => e.id}) %>
 <%end%>
 
 <hr>
