@@ -1,7 +1,11 @@
+<div class="container-fluid ">
 <h1>Sign Up</h1>
 <%= form_with model:@user, url:users_path do |form| %>
 <%= render "shared/form_errors", form: form %> 
  
+<div class="col-sm-6" >
+  <div class="card">
+    <div class="card-body center">
 
   <div class="mb-3">
     <%= form.label :username %>
@@ -16,4 +20,9 @@
   <div class="mb-3">
     <%= form.submit "Sign Up", class: "btn btn-primary" %>
   </div>
+
+    </div>
+  </div>
+</div>
 <% end %>
+</div>

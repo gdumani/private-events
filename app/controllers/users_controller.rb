@@ -1,4 +1,9 @@
-class UsersController < ApplicationController
+class UsersController < ApplicationController 
+
+  def index 
+    
+  end
+
   def show 
     @events = @current.events
   end
