@@ -1,2 +1,6 @@
 <h1>AttendedEvents#new</h1>
 <p>Find me in app/views/attended_events/new.html.erb</p>
+
+<p> user id <%=@to_attend.event_user_id%> event_id <%=@to_attend.user_event_id%></p>
+<p><%= @to_attend.event.description%> by <%=@to_attend.event.creator.username%></p>
+<p><%= @to_attend.event.event_date%></p>
