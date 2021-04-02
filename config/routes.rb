@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'attended_events/new'
-  get 'attended_events/create'
+  post 'attended_events/create'
   get 'events/index'
   get 'events/show'
   get 'events/new'

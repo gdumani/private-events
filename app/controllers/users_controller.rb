@@ -5,7 +5,8 @@ class UsersController < ApplicationController
   end
 
   def show 
-    @events = @current.events
+    @created_events = @current.events
+    @attending_events = @current.attended_events
   end
 
   def new

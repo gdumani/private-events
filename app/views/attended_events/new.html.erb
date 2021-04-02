@@ -1,6 +1,22 @@
-<h1>AttendedEvents#new</h1>
-<p>Find me in app/views/attended_events/new.html.erb</p>
+<h1>Event Attendance Registration</h1>
 
-<p> user id <%=@to_attend.event_user_id%> event_id <%=@to_attend.user_event_id%></p>
-<p><%= @to_attend.event.description%> by <%=@to_attend.event.creator.username%></p>
-<p><%= @to_attend.event.event_date%></p>
+
+<div class="card w-75 mt-4 ">
+  <h3 class="card-header fw-bold text-secondary">Attend to this Event</h3>
+  <div class="card-body">
+    <div class="border border-secondary mb-2 rounded p-3">
+      <h4>Event: <%= @to_attend.event.description %></h4>
+      <h5>Event date: <%= @to_attend.event.event_date %></h5>
+      <h5>By <%= @to_attend.event.creator.username %></h5>
+    </div>
+  </div>
+  
+<%= form_with model: @to_attend, url: attended_events_create_path do |form| %>
+  <div class="mb-3">
+    <%= form.submit "Attend Event", class: "btn btn-primary" %>
+    <%= link_to 'Cancel', events_index_path, class: 'btn btn-success' %> 
+  </div>
+<%end%>
+  
+
+</div>

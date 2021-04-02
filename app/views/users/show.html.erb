@@ -1,9 +1,25 @@
 <div class="card w-75 mt-4 ">
-  <h3 class="card-header fw-bold text-secondary"><%= @current.username%>'s Created Events</h3>
+  <h3 class="card-header fw-bold text-secondary">Created Events</h3>
   <div class="card-body">
-     <% @events.each do |e|%>
-    <div class="border border-secondary mb-2 rounded-pill p-2">
-    <h3>Event: <%= e.description %></h3></div>
+     <% @created_events.each do |e|%>
+    <div class="border border-secondary mb-2 rounded p-3">
+      <h4>Event: <%= e.description %></h4>
+      <h5>Event date: <%= e.event_date %></h5>
+    </div>
      <%end%>
   </div>
 </div>
+<hr>
+<div class="card w-75 mt-4 ">
+  <h3 class="card-header fw-bold text-secondary">Attending Events</h3>
+  <div class="card-body">
+     <% @attending_events.each do |e|%>
+    <div class="border border-secondary mb-2 rounded p-3">
+      <h4>Event: <%= e.event.description %></h4>
+      <h5>Event date: <%= e.event.event_date %></h5>
+       <h6>By: <%= e.event.creator.username %></h6>
+    </div>
+     <%end%>
+  </div>
+</div>
+
