@@ -1,10 +1,11 @@
-<h3>Sign In With Username</h3>
+<div class="container mt-4">
+<h3 class="fw-normal text-secondary mt-3">Sign In With Username</h3>
 
 <%= form_with(url: login_path) do |form| %>
 
-<div class="col-sm-6" >
+<div class="col-sm-6 col-lg-auto" >
   <div class="card">
-    <div class="card-body center">
+    <div class="card-body center bg-light">
 
   <div class="mb-3">
     <%= form.label :username%>
@@ -19,3 +20,6 @@
   </div>
 </div>
 <% end %>
+</div>
+
+

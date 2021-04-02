@@ -1,18 +1,28 @@
-<h1 class="text-primary"> All Events </h1>
+<h2 class="fw-bold text-secondary mt-3""> Upcomin Events </h2>
 
-<h2 class="fw-bold"> Upcomin Events </h2>
-<% @events.upcoming_events.each do |e| %>
-  <h3>Event: <%= e.description %></h3>
-  <h4>Date: <%= e.event_date%></h4>
-  <h4 class= "fst-italic">Creator: <%= e.creator.username %></h4>
-  <%= link_to 'Attend the Event', attended_events_new_path(:attended_events =>{:user_event_id => e.id}) %>
-<%end%>
+<div class="card w-75">
+  <div class="card-body">
+    <% @events.upcoming_events.each do |e| %>
+      <h5 class="card-title">Event: <%= e.description %></h5>
+      <h6 class="card-text">Date: <%= e.event_date%></h6>
+      <h6 class="card-text fst-italic">Creator: <%= e.creator.username %></h6>    
+    <%= link_to 'Attend the Event', attended_events_new_path(:attended_events =>{:user_event_id => e.id}), class: 'btn btn-success' %> 
+    <%end%>
+  </div>
+</div>
 
 <hr>
-<h2 class="fw-bold"> Past Events </h2>
-<% @events.previous_events.each do |e| %>
-  <h3>Event: <%= e.description %></h3>
-  <h4>Date: <%= e.event_date%></h4>
-  <h4 class= "fst-italic">Creator: <%= e.creator.username %></h4>
-<%end%>
+<h2 class="fw-bold text-secondary mt-3"> Past Events </h2>
+<div class="card w-75">
+  <div class="card-body">
+    <% @events.previous_events.each do |e| %>
+      <h5 class="card-title">Event: <%= e.description %></h5>
+      <p class="card-text">Date: <%= e.event_date%></p>
+      <p class="card-text fst-italic">Creator: <%= e.creator.username %></p>    
+    <%end%>
+  </div>
+</div>
+
+
+
 

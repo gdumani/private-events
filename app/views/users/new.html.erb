@@ -1,11 +1,11 @@
 <div class="container-fluid ">
-<h1>Sign Up</h1>
+<h1 class="fw-normal text-secondary mt-3">Sign Up</h1>
 <%= form_with model:@user, url:users_path do |form| %>
 <%= render "shared/form_errors", form: form %> 
  
-<div class="col-sm-6" >
+<div class="col-sm-6 col-lg-auto" > 
   <div class="card">
-    <div class="card-body center">
+    <div class="card-body center bg-light">
 
   <div class="mb-3">
     <%= form.label :username %>
