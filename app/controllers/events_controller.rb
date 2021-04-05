@@ -13,8 +13,10 @@ class EventsController < ApplicationController
 
 def create
   @event = @current.events.build(event_params)
-  if @event.save
-        redirect_to events_show_path, notice: "Event was created successfully"
+  if @event.event_date < Time.now
+      redirect_to events_new_path, alert: "Invalid date!!!"
+    elsif @event.save
+      redirect_to events_show_path, notice: "Event was created successfully"
     else
     render :new
   end
