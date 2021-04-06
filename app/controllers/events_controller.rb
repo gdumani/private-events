@@ -7,25 +7,24 @@ class EventsController < ApplicationController
     @events = @current.events
   end
 
-  def new 
-   @event = @current.events.new
+  def new
+    @event = @current.events.new
   end
 
-def create
-  @event = @current.events.build(event_params)
-  if @event.event_date < Time.now
-      redirect_to events_new_path, alert: "Invalid date!!!"
+  def create
+    @event = @current.events.build(event_params)
+    if @event.event_date < Time.now
+      redirect_to events_new_path, alert: 'Invalid date!!!'
     elsif @event.save
-      redirect_to events_show_path, notice: "Event was created successfully"
+      redirect_to events_show_path, notice: 'Event was created successfully'
     else
-    render :new
+      render :new
+    end
   end
-end
 
-private
+  private
 
   def event_params
-      params.require(:event).permit(:description, :event_date)
+    params.require(:event).permit(:description, :event_date)
   end
-
 end
