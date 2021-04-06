@@ -10,16 +10,8 @@ RSpec.describe User, type: :model do
       expect(User.all.count).to eq(1)
     end
   end
-  describe "validations" do 
-      it "should not let a user be created without an email address" do
-        @user.email = nil
-        expect(@user).to_not be_valid
-      end
 
-      it 'should not let a user be created without an username' do
-      @user.username = nil
-      expect(@user).to_not be_valid
-      end
+  describe "validations" do 
 
       it 'validates presence' do
           @user = User.new
