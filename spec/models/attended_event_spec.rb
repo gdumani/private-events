@@ -18,7 +18,7 @@ end
   end 
 
   describe 'Validations' do
-    it { expect(AttendedEvent).to validate_uniqueness_of(:event_user_id).scoped_to(:user_event_id) }
+    it { expect(@attending_event).to validate_uniqueness_of(:event_user_id).scoped_to(:user_event_id) }
   end
 
 end
