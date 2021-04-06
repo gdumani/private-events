@@ -1,10 +1,7 @@
-class UsersController < ApplicationController 
+class UsersController < ApplicationController
+  def index; end
 
-  def index 
-    
-  end
-
-  def show 
+  def show
     @created_events = @current.events
     @attending_events = @current.attended_events
   end
@@ -16,13 +13,13 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-        session[:user_id] = @user.id 
-        redirect_to root_path, notice: "Successfully created account"
+      session[:user_id] = @user.id
+      redirect_to root_path, notice: 'Successfully created account'
     else
-        render :new
+      render :new
     end
   end
-  
+
   private
 
   def user_params
