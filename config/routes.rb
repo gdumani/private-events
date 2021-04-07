@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post 'events/create'
   get 'users/show'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: "home#index"
+  root to: "events#index"
   resources :users, only: [:show, :new, :create, :index]
   get 'login', to: 'sessions#new' 
   post 'login', to: 'sessions#create' 
