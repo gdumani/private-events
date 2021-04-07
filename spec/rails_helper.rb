@@ -68,4 +68,3 @@ end
     with.library :rails
   end
 end
-
