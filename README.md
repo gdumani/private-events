@@ -1,7 +1,6 @@
 # Private Events
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-### Purpose:
 The private-event project allows the user to create and attend events that take place at a specific date and time.
 
 ## Build with
@@ -34,10 +33,10 @@ end
 **One-To-Many Relationship**
 ```
 To create a one-to-many association, we create User and Event databases.
-As Users can have multiple events, we need a one-to-many association to represent it.
-We specify the User and Event relationship by adding `has_many: events`
-to the User model and `belongs_to: User` to the Event model.
-Then, we add `user_id foreign_key` in the Event table using migration.
+As Users can have multiple events, we need a one-to-many association to
+represent it. We specify the User and Event relationship by adding
+`has_many: events` to the User model and `belongs_to: User` to the Event
+ model.Then, we add `user_id foreign_key` in the Event table using migration.
 ```
 **Many-To-Many Relationship**
 ```
