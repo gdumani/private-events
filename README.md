@@ -4,7 +4,7 @@
 The private-event project allows the user to create and attend events that take place at a specific date and time.
 
 ## Build with
-* Ruby 2.7.0
+* Ruby 3.0
 * Rais 6
 * SQL lite
 
@@ -35,14 +35,14 @@ end
 To create a one-to-many association, we create User and Event databases.
 As Users can have multiple events, we need a one-to-many association to
 represent it. We specify the User and Event relationship by adding
-`has_many: events` to the User model and `belongs_to: User` to the Event
- model.Then, we add `user_id foreign_key` in the Event table using migration.
+has_many: events to the User model and belongs_to: User to the Event
+ model.Then, we add user_id foreign_key in the Event table using migration.
 ```
 **Many-To-Many Relationship**
 ```
 Since in this project, the User can attend multiple events and the Event can
 have many users we need a many-to-many association to relate the User to the
-attending event through a joining table called `Attended_event` that allows
+attending event through a joining table called Attended_event that allows
 us to query the relationship between the two tables.
 ```
 We design a database schema using the following diagram:
