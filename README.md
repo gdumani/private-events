@@ -33,11 +33,12 @@ end
 ## Instruction for creating an associations between the User and Event
 **One-To-Many Relationship**
 ```
-To create a one-to-many association, we create User and Event databases. As Users can have multiple events, we need a one-to-many association to represent it. We specify the User and Event relationship by adding `has_many: events` to the User model and `belongs_to: User` to the Event model. Then, we add `user_id foreign_key` in the Event table using migration.
+To create a one-to-many association, we create User and Event databases. 
+As Users can have multiple events, we need a one-to-many association to represent it.   We specify the User and Event relationship by adding `has_many: events` to the User model and `belongs_to: User` to the Event model.  Then, we add `user_id foreign_key` in the Event table using migration.
 ```
 **Many-To-Many Relationship**
 ```
-Since in this project, the User can attend multiple events and the Event can have many users we need a many-to-many association to relate the User to the attending event through a joining table called `Attended_event` that allows us to query the relationship between the two tables.
+Since in this project, the User can attend multiple events and the Event can have   many users we need a many-to-many association to relate the User to the attending   event through a joining table called `Attended_event` that allows us to query the   relationship between the two tables.
 ```
 We design a database schema using the following diagram >
 
@@ -46,9 +47,8 @@ We design a database schema using the following diagram >
 ## Instruction for RSpec installation
 - add `gem rspec-rails' and `gem 'rexml' to the `Gem file`
 - run `bundle install`
-- run `rails generate rspec:install` to create spec directory and spec_helper.rb - files
+- run `rails generate rspec:install` to create spec directory and spec_helper.rb files
 - run `rails generate rspec:model model_name` to create tests for model associations and validations.
-
 
 ## Authors
 
