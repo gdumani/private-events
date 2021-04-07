@@ -33,11 +33,15 @@ end
 ## Instruction for creating an associations between the User and Event
 **One-To-Many Relationship**
 ```
-To create a one-to-many association, we create User and Event databases. As Users can have multiple events, <br /> we need a one-to-many association to represent it. <br /> We specify the User and Event relationship by adding `has_many: events` <br /> to the User model and `belongs_to: User` to the Event model.<br /> Then, we add `user_id foreign_key` in the Event table using migration.
+- To create a one-to-many association, we create User and Event databases. 
+- As Users can have multiple events, we need a one-to-many association to represent it.   
+- We specify the User and Event relationship by adding `has_many: events` 
+to the User model and `belongs_to: User` to the Event model.  
+- Then, we add `user_id foreign_key` in the Event table using migration.
 ```
 **Many-To-Many Relationship**
 ```
-Since in this project, the User can attend multiple events and the Event can have many users <br /> we need a many-to-many association to relate the User to the attending event <br /> through a joining table called `Attended_event` that allows us to query <br /> the relationship between the two tables.
+- Since in this project, the User can attend multiple events and the Event can have many users we need a many-to-many association to relate the User to the attending event through a joining table called `Attended_event` that allows us to query the relationship between the two tables.
 ```
 We design a database schema using the following diagram:
 
