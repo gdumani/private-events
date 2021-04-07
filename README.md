@@ -30,7 +30,7 @@ group :production do
 end
 ```
 
-## Instruction for creating an associations between the User and Event
+## Instruction for creating an association between the User and Event
 **One-To-Many Relationship**
 ```
 - To create a one-to-many association, we create User and Event databases. 
@@ -41,7 +41,7 @@ to the User model and `belongs_to: User` to the Event model.
 ```
 **Many-To-Many Relationship**
 ```
-- Since in this project, the User can attend multiple events and the Event can have many users we need a many-to-many association to relate the User to the attending event through a joining table called `Attended_event` that allows us to query the relationship between the two tables.
+Since in this project, the User can attend multiple events and the Event can \n have many users we need a many-to-many association to relate the User to \n the attending event through a joining table called `Attended_event` that \n allows us to query the relationship between the two tables.
 ```
 We design a database schema using the following diagram:
 
