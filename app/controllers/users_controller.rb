@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-  def index; end
-
   def show
     @created_events = @current.events
     @attending_events = @current.attended_events
