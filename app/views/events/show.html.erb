@@ -1,11 +1,13 @@
 
 <div class="card w-75 mt-4 ">
-  <h3 class="card-header fw-bold text-secondary"><%= @current.username%>'s Created Events</h3>
+  <h2>List of attenees for:</h2>
+  <h3 class="card-header fw-bold text-secondary"><%= @event.description%>'s</h3>
+  <h5> <%=@event.event_date%> by: <span class='fst-italic'><%=@event.creator.username%></span></h5>
   <div class="card-body">
-     <% @events.each do |e|%>
+     <% @event.attended_events.each do |e|%>
     <div class="border border-secondary mb-2 rounded p-3">
-      <h4>Event: <%= e.description %></h4>
-      <h5>Event date: <%= e.event_date %></h5>
+      <h4>Attendee: <%= e.user.username %></h4>
+      <h5><%= e.user.email %></h5>
     </div>
      <%end%>
   </div>

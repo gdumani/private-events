@@ -6,7 +6,8 @@
       <h5 class="card-title">Event: <%= e.description %></h5>
       <h6 class="card-text">Date: <%= e.event_date%></h6>
       <h6 class="card-text fst-italic">Creator: <%= e.creator.username %></h6>    
-    <%= link_to 'Attend the Event', attended_events_new_path({:user_event_id => e.id}), class: 'btn btn-success' %> 
+    <%= link_to 'Attend the Event', attended_events_new_path({:user_event_id => e.id}), class: 'btn btn-success' if @current %> 
+    <%= link_to 'Attendees', events_show_path({:id=>e.id}), class: 'btn btn-secondary' %> 
     <%end%>
   </div>
 </div>

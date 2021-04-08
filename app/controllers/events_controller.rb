@@ -4,7 +4,7 @@ class EventsController < ApplicationController
   end
 
   def show
-    @events = @current.events
+    @event = Event.find_by(request.GET)
   end
 
   def new
@@ -16,7 +16,7 @@ class EventsController < ApplicationController
     if @event.event_date < Time.now
       redirect_to events_new_path, alert: 'Invalid date!!!'
     elsif @event.save
-      redirect_to events_show_path, notice: 'Event was created successfully'
+      redirect_to users_show_path, notice: 'Event was created successfully'
     else
       render :new
     end
