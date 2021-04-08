@@ -3,6 +3,8 @@
 
 The private-event project allows the user to create and attend events that take place at a specific date and time.
 
+![Private-Events Project Screenshot](image/private_events.png)
+
 ## Build with
 * Ruby 3.0
 * Rais 6
@@ -10,13 +12,15 @@ The private-event project allows the user to create and attend events that take 
 
 ## Getting started
 
-To clone and run the application locally, use the following steps:
-- Clone the repository from GitHub, using the `git clone` command.
-- Create the new application and switch to its folder `$cd folder name`.
-- Run `bundle` in the terminal to install the gems.
-- Run `rails server` to connect to the server.
+**To clone and run the application locally, use the following steps:**
+- On Github, on the main page of the private-event repository, click ![the Code button](image/code.png) and copy "Clone with HTTPS" by clicking ![the copy icon](image/copy.png)(e.g. git clone https://github.com/gdumani/private-events.git).
+- In your terminal, enter a 'git clone` and past the link that you copied from the repository, and press the 'Enter'
+- Navigate to the project folder using `cd folder_name`
+- To install all dependencies, run `bundle install`
+- To create a database, run `db:create`
+- To migrate the schema, run `db:migrate`
+- Now, you can run your application using the `rails s` command.
 - To verify the connection [Visit localhost:3000](http://localhost:3000 ).
-- To set up and configure your database for the first time, use `rails db:create` command.
 - To configure SQLight3 for Heroku Deployment replace `gem 'sqlite3'` in the `Gemfile` with the following code:
 
 ```
@@ -34,9 +38,10 @@ end
 ```
 To create a one-to-many association, we create User and Event databases.
 As Users can have multiple events, we need a one-to-many association to
-represent it. We specify the User and Event relationship by adding
-has_many: events to the User model and belongs_to: User to the Event
- model.Then, we add user_id foreign_key in the Event table using migration.
+represent it. 
+We specify the User and Event relationship by adding has_many:events 
+to the User model and belongs_to:User to the Event model.
+Then, we add user_id foreign_key in the Event table using migration.
 ```
 **Many-To-Many Relationship**
 ```
@@ -54,6 +59,10 @@ We design a database schema using the following diagram:
 - run `bundle install`
 - run `rails generate rspec:install` to create spec directory and spec_helper.rb files
 - run `rails generate rspec:model model_name` to create tests for model associations and validations.
+- You can use the `rspec` or `bundle exec rspec` command to run all spec files.
+- To test files in a single directory, run `rspec spec/models`
+- To test a single spec file, run `rspec spec/models/user_spec.rb`
+- To run a specific example from your user_spec.rb file, run `rspec spec/models/user_spec.rb:5`
 
 ## Authors
 
