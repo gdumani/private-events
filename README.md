@@ -14,7 +14,8 @@ The private-event project allows the user to create and attend events that take 
 
 **To clone and run the application locally, use the following steps:**
 - On Github, on the main page of the private-event repository, click ![the Code button](image/code.png) and copy "Clone with HTTPS" by clicking ![the copy icon](image/copy.png).
-- In your terminal, enter a 'git clone` and past the link that you copied from the repository, and press the 'Enter'(e.g. git clone https://github.com/gdumani/private-events.git).
+- In your terminal, enter a 'git clone` and past the link that you copied from the repository, and press the 'Enter'
+(e.g. git clone https://github.com/gdumani/private-events.git).
 - Navigate to the project folder using `cd folder_name`
 - To install all dependencies, run `bundle install`
 - To create a database, run `db:create`
@@ -54,7 +55,7 @@ We design a database schema using the following diagram:
 
 ![Database diagram](image/private_event.png)
 
-## Instruction for RSpec installation
+## Steps for running and installing RSpec
 - add `gem rspec-rails` and `gem 'rexml'` to the Gem file
 - run `bundle install`
 - run `rails generate rspec:install` to create spec directory and spec_helper.rb files
