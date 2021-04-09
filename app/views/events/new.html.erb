@@ -1,0 +1,21 @@
+<h3 class="fw-bold text-secondary mt-3">Create an Event</h3>
+
+<%= form_with model: @event, url: events_create_path do |form| %>
+  <%= render "shared/form_errors", form: form %>
+
+<div class="mb-3 w-75">
+   <%= form.label :description %>
+  <%= form.text_area :description, class: "form-control" %>
+</div>
+
+<div class="mb-3 w-75">
+    <%= form.label :event_date %>
+    <div class="form-control">
+       <%= form.datetime_select :event_date, class: "form-control" %>
+    </div>
+</div>
+
+<div class="mb-3">
+ <%= form.submit "Submit", class: "btn btn-primary" %>
+</div>
+<% end %>
